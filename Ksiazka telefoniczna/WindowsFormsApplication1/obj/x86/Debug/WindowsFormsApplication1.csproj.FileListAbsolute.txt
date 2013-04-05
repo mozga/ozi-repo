@@ -56,3 +56,11 @@ C:\Users\Vatrax\Downloads\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\
 C:\Users\Vatrax\Downloads\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\Lista_Kontaktow.Lista_Kontaktów.resources
 C:\Users\Vatrax\Downloads\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\Vatrax\Downloads\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+D:\uczelnia\polibuda\repozytorium\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+D:\uczelnia\polibuda\repozytorium\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+D:\uczelnia\polibuda\repozytorium\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\uczelnia\polibuda\repozytorium\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\uczelnia\polibuda\repozytorium\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+D:\uczelnia\polibuda\repozytorium\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\Lista_Kontaktow.Lista_Kontaktów.resources
+D:\uczelnia\polibuda\repozytorium\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\uczelnia\polibuda\repozytorium\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache

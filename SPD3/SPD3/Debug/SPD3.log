@@ -1,0 +1,18 @@
+﻿Kompilacja rozpoczęła się 2013-04-06 12:40:16.
+     1>Projekt „D:\PWR\Pogramy\C++\SPD\SPD3\SPD3\SPD3.vcxproj” w węźle 2 (elementy docelowe: Build).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\SPD3.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\SPD3.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt SPD3.cpp
+         SPD3.cpp
+     1>d:\pwr\pogramy\c++\spd\spd3\spd3\spd3.cpp(19): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+     1>d:\pwr\pogramy\c++\spd\spd3\spd3\spd3.cpp(23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+     1>d:\pwr\pogramy\c++\spd\spd3\spd3\spd3.cpp(24): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+     1>d:\pwr\pogramy\c++\spd\spd3\spd3\spd3.cpp(37): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+     1>d:\pwr\pogramy\c++\spd\spd3\spd3\spd3.cpp(40): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+     1>d:\pwr\pogramy\c++\spd\spd3\spd3\spd3.cpp(53): fatal error C1075: napotkano koniec pliku przed pozostawionym dopasowaniu nawias klamrowy "{" na ' d:\pwr\pogramy\c++\spd\spd3\spd3\spd3.cpp(12)'
+     1>Kompilowanie projektu „D:\PWR\Pogramy\C++\SPD\SPD3\SPD3\SPD3.vcxproj” wykonane (elementy docelowe: Build) — NIEPOWODZENIE.
+
+Kompilacja NIE POWIODŁA SIĘ.
+
+Czas, który upłynął: 00:00:02.45

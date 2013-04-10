@@ -65,13 +65,21 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.telefon_button = new System.Windows.Forms.Button();
+            this.telefon = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.email_button = new System.Windows.Forms.Button();
             this.www_button = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.edytuj_button = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.telefon_box = new System.Windows.Forms.ListBox();
+            this.buttonSerialBin = new System.Windows.Forms.Button();
+            this.buttonDeserialBin = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.linkLabelwww = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -83,7 +91,7 @@
             // Dodaj_button
             // 
             this.Dodaj_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Dodaj_button.Location = new System.Drawing.Point(870, 283);
+            this.Dodaj_button.Location = new System.Drawing.Point(869, 284);
             this.Dodaj_button.Name = "Dodaj_button";
             this.Dodaj_button.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Dodaj_button.Size = new System.Drawing.Size(101, 27);
@@ -95,7 +103,7 @@
             // Usun_button
             // 
             this.Usun_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Usun_button.Location = new System.Drawing.Point(870, 349);
+            this.Usun_button.Location = new System.Drawing.Point(869, 350);
             this.Usun_button.Name = "Usun_button";
             this.Usun_button.Size = new System.Drawing.Size(101, 27);
             this.Usun_button.TabIndex = 1;
@@ -213,7 +221,7 @@
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(959, 265);
+            this.listView1.Size = new System.Drawing.Size(959, 266);
             this.listView1.TabIndex = 38;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -362,7 +370,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(12, 283);
+            this.groupBox1.Location = new System.Drawing.Point(11, 284);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(147, 127);
             this.groupBox1.TabIndex = 50;
@@ -382,7 +390,7 @@
             this.groupBox2.Controls.Add(this.Panstwo);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(165, 283);
+            this.groupBox2.Location = new System.Drawing.Point(164, 284);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(202, 166);
             this.groupBox2.TabIndex = 51;
@@ -392,23 +400,52 @@
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox3.Controls.Add(this.telefon_button);
+            this.groupBox3.Controls.Add(this.telefon);
+            this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.www);
             this.groupBox3.Controls.Add(this.email);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Location = new System.Drawing.Point(373, 283);
+            this.groupBox3.Location = new System.Drawing.Point(372, 284);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(160, 94);
+            this.groupBox3.Size = new System.Drawing.Size(160, 127);
             this.groupBox3.TabIndex = 52;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dane Kontaktowe";
+            // 
+            // telefon_button
+            // 
+            this.telefon_button.Location = new System.Drawing.Point(108, 98);
+            this.telefon_button.Name = "telefon_button";
+            this.telefon_button.Size = new System.Drawing.Size(46, 23);
+            this.telefon_button.TabIndex = 63;
+            this.telefon_button.Text = "Dodaj";
+            this.telefon_button.UseVisualStyleBackColor = true;
+            this.telefon_button.Click += new System.EventHandler(this.telefon_button_Click);
+            // 
+            // telefon
+            // 
+            this.telefon.Location = new System.Drawing.Point(6, 101);
+            this.telefon.Name = "telefon";
+            this.telefon.Size = new System.Drawing.Size(95, 20);
+            this.telefon.TabIndex = 62;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "telefon";
             // 
             // groupBox4
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox4.Controls.Add(this.d_zdjecie_button);
             this.groupBox4.Controls.Add(this.pictureBox1);
-            this.groupBox4.Location = new System.Drawing.Point(539, 283);
+            this.groupBox4.Location = new System.Drawing.Point(538, 284);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(112, 182);
             this.groupBox4.TabIndex = 53;
@@ -418,7 +455,7 @@
             // email_button
             // 
             this.email_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.email_button.Location = new System.Drawing.Point(870, 382);
+            this.email_button.Location = new System.Drawing.Point(869, 383);
             this.email_button.Name = "email_button";
             this.email_button.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.email_button.Size = new System.Drawing.Size(101, 27);
@@ -429,7 +466,7 @@
             // www_button
             // 
             this.www_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.www_button.Location = new System.Drawing.Point(870, 415);
+            this.www_button.Location = new System.Drawing.Point(869, 416);
             this.www_button.Name = "www_button";
             this.www_button.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.www_button.Size = new System.Drawing.Size(101, 27);
@@ -441,7 +478,7 @@
             // 
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Controls.Add(this.textBox1);
-            this.groupBox6.Location = new System.Drawing.Point(657, 283);
+            this.groupBox6.Location = new System.Drawing.Point(656, 284);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(208, 39);
             this.groupBox6.TabIndex = 57;
@@ -459,7 +496,7 @@
             // edytuj_button
             // 
             this.edytuj_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.edytuj_button.Location = new System.Drawing.Point(870, 316);
+            this.edytuj_button.Location = new System.Drawing.Point(869, 317);
             this.edytuj_button.Name = "edytuj_button";
             this.edytuj_button.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.edytuj_button.Size = new System.Drawing.Size(101, 27);
@@ -468,20 +505,60 @@
             this.edytuj_button.UseVisualStyleBackColor = true;
             this.edytuj_button.Click += new System.EventHandler(this.edytuj_button_Click);
             // 
-            // textBox3
+            // telefon_box
             // 
-            this.textBox3.Location = new System.Drawing.Point(750, 333);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 60;
+            this.telefon_box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.telefon_box.FormattingEnabled = true;
+            this.telefon_box.Location = new System.Drawing.Point(372, 416);
+            this.telefon_box.Name = "telefon_box";
+            this.telefon_box.Size = new System.Drawing.Size(160, 95);
+            this.telefon_box.TabIndex = 61;
+            // 
+            // buttonSerialBin
+            // 
+            this.buttonSerialBin.Location = new System.Drawing.Point(687, 341);
+            this.buttonSerialBin.Name = "buttonSerialBin";
+            this.buttonSerialBin.Size = new System.Drawing.Size(75, 23);
+            this.buttonSerialBin.TabIndex = 62;
+            this.buttonSerialBin.Text = "Serializuj";
+            this.buttonSerialBin.UseVisualStyleBackColor = true;
+            this.buttonSerialBin.Click += new System.EventHandler(this.buttonSerialBin_Click);
+            // 
+            // buttonDeserialBin
+            // 
+            this.buttonDeserialBin.Location = new System.Drawing.Point(710, 420);
+            this.buttonDeserialBin.Name = "buttonDeserialBin";
+            this.buttonDeserialBin.Size = new System.Drawing.Size(75, 23);
+            this.buttonDeserialBin.TabIndex = 63;
+            this.buttonDeserialBin.Text = "Deserilaizuj";
+            this.buttonDeserialBin.UseVisualStyleBackColor = true;
+            this.buttonDeserialBin.Click += new System.EventHandler(this.buttonDeserialBin_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // linkLabelwww
+            // 
+            this.linkLabelwww.AutoSize = true;
+            this.linkLabelwww.Location = new System.Drawing.Point(589, 507);
+            this.linkLabelwww.Name = "linkLabelwww";
+            this.linkLabelwww.Size = new System.Drawing.Size(55, 13);
+            this.linkLabelwww.TabIndex = 64;
+            this.linkLabelwww.TabStop = true;
+            this.linkLabelwww.Text = "linkLabel1";
+            this.linkLabelwww.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.linkLabelwww_MouseDoubleClick);
             // 
             // Lista_Kontaktów
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(983, 477);
-            this.Controls.Add(this.textBox3);
+            this.ClientSize = new System.Drawing.Size(983, 524);
+            this.Controls.Add(this.linkLabelwww);
+            this.Controls.Add(this.buttonDeserialBin);
+            this.Controls.Add(this.buttonSerialBin);
+            this.Controls.Add(this.telefon_box);
             this.Controls.Add(this.edytuj_button);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.www_button);
@@ -556,7 +633,15 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button edytuj_button;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button telefon_button;
+        private System.Windows.Forms.TextBox telefon;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox telefon_box;
+        private System.Windows.Forms.Button buttonSerialBin;
+        private System.Windows.Forms.Button buttonDeserialBin;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.LinkLabel linkLabelwww;
 
 
     }

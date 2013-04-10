@@ -64,3 +64,12 @@ D:\uczelnia\polibuda\repozytorium\ozi-repo\Ksiazka telefoniczna\WindowsFormsAppl
 D:\uczelnia\polibuda\repozytorium\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\Lista_Kontaktow.Lista_Kontaktów.resources
 D:\uczelnia\polibuda\repozytorium\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 D:\uczelnia\polibuda\repozytorium\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\dell\Desktop\oziego\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Users\dell\Desktop\oziego\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Users\dell\Desktop\oziego\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\dell\Desktop\oziego\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\Lista_Kontaktow.Lista_Kontaktów.resources
+C:\Users\dell\Desktop\oziego\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\dell\Desktop\oziego\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\dell\Desktop\oziego\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\dell\Desktop\oziego\Ksiazka telefoniczna\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\dell\Desktop\oziego\Ksiazka telefoniczna\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb

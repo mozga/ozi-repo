@@ -1,6 +1,6 @@
-﻿namespace Lista_Kontaktow
+﻿namespace WindowsFormsApplication1
 {
-    partial class Lista_Kontaktów
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.

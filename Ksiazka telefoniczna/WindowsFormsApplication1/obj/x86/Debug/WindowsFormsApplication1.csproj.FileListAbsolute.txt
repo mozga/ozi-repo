@@ -73,3 +73,11 @@ C:\Users\dell\Desktop\oziego\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x
 C:\Users\dell\Desktop\oziego\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\dell\Desktop\oziego\Ksiazka telefoniczna\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 C:\Users\dell\Desktop\oziego\Ksiazka telefoniczna\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Vatrax\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Users\Vatrax\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Users\Vatrax\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Vatrax\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Vatrax\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Vatrax\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Vatrax\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Vatrax\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb

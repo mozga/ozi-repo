@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Lista_Kontaktow
+namespace WindowsFormsApplication1
 {
     static class Program
     {
@@ -15,7 +15,7 @@ namespace Lista_Kontaktow
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Lista_Kontaktów());
+            Application.Run(new Form1());
         }
     }
 }

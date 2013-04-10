@@ -11,14 +11,14 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml;
 
-namespace Lista_Kontaktow
+namespace WindowsFormsApplication1
 {
     
 
-    public partial class Lista_Kontaktów : Form
+    public partial class Form1 : Form
     {
         
-        public Lista_Kontaktów()
+        public Form1()
         {
             InitializeComponent();
         }

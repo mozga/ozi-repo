@@ -81,3 +81,5 @@ C:\Users\Vatrax\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsAppli
 C:\Users\Vatrax\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
 C:\Users\Vatrax\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 C:\Users\Vatrax\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Ozi\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Users\Ozi\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb

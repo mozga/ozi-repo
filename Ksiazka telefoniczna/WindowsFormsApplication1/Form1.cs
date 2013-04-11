@@ -13,17 +13,17 @@ using System.Xml;
 
 namespace WindowsFormsApplication1
 {
-    
+
 
     public partial class Form1 : Form
     {
-        
+
         public Form1()
         {
             InitializeComponent();
         }
-        
-        
+
+
         [Serializable]
         struct Osoba
         {
@@ -37,6 +37,7 @@ namespace WindowsFormsApplication1
             public string Panstwo { get; set; }
             public string email { get; set; }
             public string www { get; set; }
+            public string foto { get; set; }
             public List<string> telefony { get; set; }
         }
 
@@ -80,7 +81,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+         private void button1_Click(object sender, EventArgs e)
         {
             Osoba nowy = new Osoba();
 
@@ -94,17 +95,17 @@ namespace WindowsFormsApplication1
             nowy.Panstwo = Panstwo.Text;
             nowy.email = email.Text;
             nowy.www = www.Text;
-            nowy.telefony = tel;
+            nowy.telefony = new List<string>(tel);
+            nowy.foto = pictureBox1.ImageLocation;
             tel.Clear();
 
-
-
+       
             if (wiek(nowy.data_urodzenia) != 0)
             {
                 Lista.Add(nowy);
                 przypisz();
 
-                /*               Imie.Text = "";
+                               Imie.Text = "";
                                Nazwisko.Text = "";
                                Data_urodzenia.Text = "";
                                Ulica.Text = "";
@@ -114,8 +115,8 @@ namespace WindowsFormsApplication1
                                Panstwo.Text = "";
                                email.Text = "";
                                www.Text = "";
-                               telefon.Text="";*/
-                telefon_box.Items.Clear();
+                               telefon.Text="";
+                 telefon_box.Items.Clear();
                 pictureBox1.Image = WindowsFormsApplication1.Properties.Resources.indeks;
             }
 
@@ -127,7 +128,8 @@ namespace WindowsFormsApplication1
             OpenFileDialog openfile1 = new OpenFileDialog();
             openfile1.ShowDialog();
             pictureBox1.ImageLocation = openfile1.FileName;
-            this.Text = openfile1.FileName;
+            this.Text = pictureBox1.ImageLocation;
+
 
         }
 
@@ -226,14 +228,14 @@ namespace WindowsFormsApplication1
             nowy.Panstwo = Panstwo.Text;
             nowy.email = email.Text;
             nowy.www = www.Text;
-            nowy.telefony = tel;
+            nowy.telefony = new List<string>(tel);
 
             if (wiek(nowy.data_urodzenia) != 0)
             {
                 Lista.Add(nowy);
                 przypisz();
 
-                /*Imie.Text = "";
+                Imie.Text = "";
                 Nazwisko.Text = "";
                 Data_urodzenia.Text = "";
                 Ulica.Text = "";
@@ -242,7 +244,8 @@ namespace WindowsFormsApplication1
                 Miasto.Text = "";
                 Panstwo.Text = "";
                 email.Text = "";
-                www.Text = "";*/
+                www.Text = "";
+                telefon.Text = "";
                 pictureBox1.Image = WindowsFormsApplication1.Properties.Resources.indeks;
             }
 
@@ -271,12 +274,12 @@ namespace WindowsFormsApplication1
                                             Panstwo.Text = Lista[i].Panstwo;
                                             email.Text = Lista[i].email;
                                             www.Text = Lista[i].www;
-                                            linkLabelwww.Text = Lista[i].www;
-                                            //tel = Lista[i].telefony;
-                                            // telefon_box.Items.Clear();
-                                            telefon_box.DataSource = Lista[i].telefony;
-                                            for (int j = 0; j < tel.Capacity; j++)
-                                                telefon_box.Items.Add("aaaa");
+                                            pictureBox1.ImageLocation = Lista[i].foto;
+                                            tel = Lista[i].telefony;
+                                            telefon_box.Items.Clear();
+
+                                            for (int j = 0; j < tel.Count; j++)
+                                                telefon_box.Items.Add(tel[j]);
                                         }
 
             }
@@ -286,7 +289,7 @@ namespace WindowsFormsApplication1
         {
             tel.Add(telefon.Text);
             telefon_box.Items.Clear();
-            for (int j = 0; j < tel.Capacity; j++)
+            for (int j = 0; j < tel.Count; j++)
                 telefon_box.Items.Add(tel[j]);
 
         }
@@ -335,21 +338,30 @@ namespace WindowsFormsApplication1
                 DataDeserialization(openFileDialog1.FileName); //deserializuje
                 MessageBox.Show("Wczytano listę z pliku: " + openFileDialog1.FileName, "Informacja");
                 przypisz();
-                
-                
+
+
             }
 
             ////////////////////////////////////////////////////////////////////////////////////////////////
             ////////////////////////////////////////////////////////////////////////////////////////////////////
-         
+
 
         }
-      
 
-        private void linkLabelwww_MouseDoubleClick(object sender, MouseEventArgs e)
+
+        private void linkLabelwww_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           
+
+            
+
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //Przeglad.ja = www.Text;
+            Przeglad Przeglad = new Przeglad();
+            Przeglad.SetWeb(www.Text);
+            Przeglad.ShowDialog();
+        }
     }
 }

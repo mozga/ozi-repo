@@ -70,7 +70,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.email_button = new System.Windows.Forms.Button();
-            this.www_button = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.edytuj_button = new System.Windows.Forms.Button();
@@ -79,7 +78,7 @@
             this.buttonDeserialBin = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.linkLabelwww = new System.Windows.Forms.LinkLabel();
+            this.www_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -463,17 +462,6 @@
             this.email_button.Text = "E-mail";
             this.email_button.UseVisualStyleBackColor = true;
             // 
-            // www_button
-            // 
-            this.www_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.www_button.Location = new System.Drawing.Point(869, 416);
-            this.www_button.Name = "www_button";
-            this.www_button.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.www_button.Size = new System.Drawing.Size(101, 27);
-            this.www_button.TabIndex = 55;
-            this.www_button.Text = "Strona www";
-            this.www_button.UseVisualStyleBackColor = true;
-            // 
             // groupBox6
             // 
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -516,7 +504,7 @@
             // 
             // buttonSerialBin
             // 
-            this.buttonSerialBin.Location = new System.Drawing.Point(687, 341);
+            this.buttonSerialBin.Location = new System.Drawing.Point(662, 329);
             this.buttonSerialBin.Name = "buttonSerialBin";
             this.buttonSerialBin.Size = new System.Drawing.Size(75, 23);
             this.buttonSerialBin.TabIndex = 62;
@@ -526,7 +514,7 @@
             // 
             // buttonDeserialBin
             // 
-            this.buttonDeserialBin.Location = new System.Drawing.Point(710, 420);
+            this.buttonDeserialBin.Location = new System.Drawing.Point(662, 358);
             this.buttonDeserialBin.Name = "buttonDeserialBin";
             this.buttonDeserialBin.Size = new System.Drawing.Size(75, 23);
             this.buttonDeserialBin.TabIndex = 63;
@@ -538,30 +526,30 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // linkLabelwww
+            // www_button
             // 
-            this.linkLabelwww.AutoSize = true;
-            this.linkLabelwww.Location = new System.Drawing.Point(589, 507);
-            this.linkLabelwww.Name = "linkLabelwww";
-            this.linkLabelwww.Size = new System.Drawing.Size(55, 13);
-            this.linkLabelwww.TabIndex = 64;
-            this.linkLabelwww.TabStop = true;
-            this.linkLabelwww.Text = "linkLabel1";
-            this.linkLabelwww.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.linkLabelwww_MouseDoubleClick);
+            this.www_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.www_button.Location = new System.Drawing.Point(869, 416);
+            this.www_button.Name = "www_button";
+            this.www_button.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.www_button.Size = new System.Drawing.Size(101, 27);
+            this.www_button.TabIndex = 65;
+            this.www_button.Text = "www";
+            this.www_button.UseVisualStyleBackColor = true;
+            this.www_button.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // Lista_Kontaktów
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(983, 524);
-            this.Controls.Add(this.linkLabelwww);
+            this.Controls.Add(this.www_button);
             this.Controls.Add(this.buttonDeserialBin);
             this.Controls.Add(this.buttonSerialBin);
             this.Controls.Add(this.telefon_box);
             this.Controls.Add(this.edytuj_button);
             this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.www_button);
             this.Controls.Add(this.email_button);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -570,7 +558,7 @@
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.Usun_button);
             this.Controls.Add(this.Dodaj_button);
-            this.Name = "Lista_Kontaktów";
+            this.Name = "Form1";
             this.Text = "Lista Kontaktów";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -584,7 +572,6 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -629,7 +616,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button email_button;
-        private System.Windows.Forms.Button www_button;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button edytuj_button;
@@ -641,7 +627,7 @@
         private System.Windows.Forms.Button buttonDeserialBin;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.LinkLabel linkLabelwww;
+        private System.Windows.Forms.Button www_button;
 
 
     }

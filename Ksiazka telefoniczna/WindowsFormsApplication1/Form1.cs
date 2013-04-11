@@ -99,7 +99,9 @@ namespace WindowsFormsApplication1
             nowy.foto = pictureBox1.ImageLocation;
             tel.Clear();
 
-       
+            tel.Clear();
+
+
             if (wiek(nowy.data_urodzenia) != 0)
             {
                 Lista.Add(nowy);
@@ -117,6 +119,19 @@ namespace WindowsFormsApplication1
                                www.Text = "";
                                telefon.Text="";
                  telefon_box.Items.Clear();
+
+                /*Imie.Text = "";
+                Nazwisko.Text = "";
+                Data_urodzenia.Text = "";
+                Ulica.Text = "";
+                Nr.Text = "";
+                kod.Text = "";
+                Miasto.Text = "";
+                Panstwo.Text = "";
+                email.Text = "";
+                www.Text = "";
+                telefon.Text="";
+                telefon_box.Items.Clear();*/
                 pictureBox1.Image = WindowsFormsApplication1.Properties.Resources.indeks;
             }
 
@@ -154,21 +169,29 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            try
+         /*   try
             {
-                //Stream file = File.Open("data.bin", FileMode.Open);
-                //listView1 = (ListView)f.Deserialize(file); nie dziala... TEZ! :D
-                //file.Close();
+                openFileDialog1.Filter = "Plik binarny (*.bin)|*.bin";
+                openFileDialog1.Multiselect = false;
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    DataDeserialization(openFileDialog1.FileName); //deserializuje
+                    przypisz();
+                }
             }
             catch (Exception E)
             {
                 MessageBox.Show("Błąd: " + E.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
 
         private void Form1_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-
+ /*           saveFileDialog1.Filter = "Plik binarny (*.bin)|*.bin"; //otwiram okno dialogowe
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                DataSerialization(saveFileDialog1.FileName); //serializuje
+            }*/
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -204,17 +227,19 @@ namespace WindowsFormsApplication1
 
         private void edytuj_button_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < Lista.Count(); i++)
-            {
 
-                if (Lista[i].Imie.Equals(listView1.SelectedItems[0].SubItems[0].Text))
-                    if (Lista[i].Nazwisko.Equals(listView1.SelectedItems[0].SubItems[1].Text))
-                        if ((wiek(Lista[i].data_urodzenia).ToString()).Equals(listView1.SelectedItems[0].SubItems[2].Text))
-                            if ((Lista[i].Ulica + " " + Lista[i].Nr_ulicy).Equals(listView1.SelectedItems[0].SubItems[3].Text))
-                                if (Lista[i].kod.Equals(listView1.SelectedItems[0].SubItems[4].Text))
-                                    if (Lista[i].Miasto.Equals(listView1.SelectedItems[0].SubItems[5].Text))
-                                        if (Lista[i].Panstwo.Equals(listView1.SelectedItems[0].SubItems[6].Text))
-                                            Lista.Remove(Lista[i]);
+            if (listView1.SelectedItems.Count != 0)
+                for (int i = 0; i < Lista.Count(); i++)
+                {
+
+                    if (Lista[i].Imie.Equals(listView1.SelectedItems[0].SubItems[0].Text))
+                        if (Lista[i].Nazwisko.Equals(listView1.SelectedItems[0].SubItems[1].Text))
+                            if ((wiek(Lista[i].data_urodzenia).ToString()).Equals(listView1.SelectedItems[0].SubItems[2].Text))
+                                if ((Lista[i].Ulica + " " + Lista[i].Nr_ulicy).Equals(listView1.SelectedItems[0].SubItems[3].Text))
+                                    if (Lista[i].kod.Equals(listView1.SelectedItems[0].SubItems[4].Text))
+                                        if (Lista[i].Miasto.Equals(listView1.SelectedItems[0].SubItems[5].Text))
+                                            if (Lista[i].Panstwo.Equals(listView1.SelectedItems[0].SubItems[6].Text))
+                                                Lista.Remove(Lista[i]);
             }
             Osoba nowy = new Osoba();
 
@@ -246,6 +271,7 @@ namespace WindowsFormsApplication1
                 email.Text = "";
                 www.Text = "";
                 telefon.Text = "";
+                telefon_box.Items.Clear();
                 pictureBox1.Image = WindowsFormsApplication1.Properties.Resources.indeks;
             }
 
@@ -278,6 +304,11 @@ namespace WindowsFormsApplication1
                                             tel = Lista[i].telefony;
                                             telefon_box.Items.Clear();
 
+                                            //linkLabelwww.Text = Lista[i].www;
+                                            tel = Lista[i].telefony;
+                                            Imie.Text = tel.Count.ToString();
+                                            Nazwisko.Text = Lista[i].telefony.Count.ToString();
+                                            telefon_box.Items.Clear();
                                             for (int j = 0; j < tel.Count; j++)
                                                 telefon_box.Items.Add(tel[j]);
                                         }

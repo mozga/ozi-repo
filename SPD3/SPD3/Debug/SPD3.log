@@ -1,14 +1,32 @@
-﻿Kompilacja rozpoczęła się 2013-04-06 15:28:48.
-     1>Projekt „D:\PWR\Pogramy\C++\SPD\SPD3\SPD3\SPD3.vcxproj” w węźle 2 (elementy docelowe: Build).
+<<<<<<< HEAD
+﻿Kompilacja rozpoczęła się 2013-04-08 01:00:37.
+     1>Projekt „C:\Users\Vatrax\Documents\GitHub\ozi-repo\SPD3\SPD3\SPD3.vcxproj” w węźle 2 (elementy docelowe: Build).
+=======
+﻿Kompilacja rozpoczęła się 2013-04-07 19:54:03.
+     1>Projekt „D:\uczelnia\polibuda\repozytorium\ozi-repo\SPD3\SPD3\SPD3.vcxproj” w węźle 2 (elementy docelowe: Build).
+>>>>>>> dodane
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\SPD3.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt SPD3.cpp
+         D:\programy\VisualStudio2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\SPD3.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         D:\programy\VisualStudio2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\SPD3.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt SPD3.cpp
          SPD3.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\PWR\Pogramy\C++\SPD\SPD3\Debug\SPD3.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\PWR\Pogramy\C++\SPD\SPD3\Debug\SPD3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\PWR\Pogramy\C++\SPD\SPD3\Debug\SPD3.lib" /MACHINE:X86 Debug\SPD3.obj
+<<<<<<< HEAD
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Vatrax\Documents\GitHub\ozi-repo\SPD3\Debug\SPD3.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Vatrax\Documents\GitHub\ozi-repo\SPD3\Debug\SPD3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Vatrax\Documents\GitHub\ozi-repo\SPD3\Debug\SPD3.lib" /MACHINE:X86 Debug\SPD3.obj
          Debug\stdafx.obj
-         SPD3.vcxproj -> D:\PWR\Pogramy\C++\SPD\SPD3\Debug\SPD3.exe
-     1>Kompilowanie projektu „D:\PWR\Pogramy\C++\SPD\SPD3\SPD3\SPD3.vcxproj” wykonane (elementy docelowe: Build).
+         SPD3.vcxproj -> C:\Users\Vatrax\Documents\GitHub\ozi-repo\SPD3\Debug\SPD3.exe
+     1>Kompilowanie projektu „C:\Users\Vatrax\Documents\GitHub\ozi-repo\SPD3\SPD3\SPD3.vcxproj” wykonane (elementy docelowe: Build).
 
 Kompilacja powiodła się.
 
-Czas, który upłynął: 00:00:01.48
+Czas, który upłynął: 00:00:01.66
+=======
+         D:\programy\VisualStudio2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\uczelnia\polibuda\repozytorium\ozi-repo\SPD3\Debug\SPD3.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\uczelnia\polibuda\repozytorium\ozi-repo\SPD3\Debug\SPD3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\uczelnia\polibuda\repozytorium\ozi-repo\SPD3\Debug\SPD3.lib" /MACHINE:X86 Debug\SPD3.obj
+         Debug\stdafx.obj
+         SPD3.vcxproj -> D:\uczelnia\polibuda\repozytorium\ozi-repo\SPD3\Debug\SPD3.exe
+     1>Kompilowanie projektu „D:\uczelnia\polibuda\repozytorium\ozi-repo\SPD3\SPD3\SPD3.vcxproj” wykonane (elementy docelowe: Build).
+
+Kompilacja powiodła się.
+
+Czas, który upłynął: 00:00:04.05
+>>>>>>> dodane

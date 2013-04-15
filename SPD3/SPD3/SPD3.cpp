@@ -26,7 +26,8 @@ bool compare (zadanie first, zadanie secound)
 int _tmain(int argc, _TCHAR* argv[])
 {
 	unsigned int n, m, czas;
-
+	bool koniec = false;
+	 
 	ifstream data_in ("FSTA.txt");
 	clock_t start, stop;
 
@@ -62,66 +63,93 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	list<zadanie> * kolejnosc = new list<zadanie>;
 	zadanie pierwszy;
-	list<zadanie>::iterator it1=szereg->begin();
-	
-	unsigned int * dlugosci_const = new unsigned int[m];	
-	for(unsigned int j=0; j<m; j++)
-		dlugosci_const[j]=tablica[it1->ID][j];
+	list<zadanie>::iterator it_main=szereg->begin();
 
-	pierwszy.ID=it1->ID;
-	pierwszy.suma=it1->suma;
+	pierwszy.ID=it_main->ID;
+	pierwszy.suma=it_main->suma;
 	kolejnosc->push_front(pierwszy);
-	it1++;
-	for(unsigned int kurwa=0; kurwa<3;/*it1!=szereg->end();*/kurwa++, it1++)
+	it_main++;
+
+	for(unsigned int op=0;/* op<3 &&*/ it_main!=szereg->end(); op++, it_main++)
 	{
-	unsigned int * dlugosci_tmp = new unsigned int[m];	
-	for(unsigned int i=0; i<m; i++)
-		dlugosci_tmp[i]=dlugosci_const[i];
-	unsigned int * dlugosci = new unsigned int[m];	
-		//cout << it1->ID << endl;
-		//for(int k=0;k<m;k++)
-			//cout << dlugosci[k] << " ";
-		//cout << endl;
+		unsigned int * sumy = new unsigned int[m];
+		for(unsigned int i=0; i<m; i++)
+			sumy[i]=0;
 		zadanie nast;
-		nast.suma=0xFFFFFFFF;
-		list<zadanie>::iterator it =kolejnosc->begin();
-		for(; it!=kolejnosc->end(); it++)
+		list<zadanie>::iterator it = kolejnosc->begin();
+		
+		while(it!=kolejnosc->end())
+		{
 			for(unsigned int j=0; j<m; j++)
-			{		cout << tablica[it->ID-1][j] << " ";
-					cout << dlugosci_tmp[j-1]<< " ";
-					cout << dlugosci_tmp[j]<< endl;
-				if(j==0)
-					dlugosci_tmp[j]+=tablica[it->ID-1][j];
+				if(it==kolejnosc->begin())
+					if(j==0)
+						sumy[j]=tablica[it_main->ID-1][j];
+					else
+						sumy[j]=sumy[j-1]+tablica[it_main->ID-1][j];
 				else
-					dlugosci_tmp[j]=max(dlugosci_tmp[j-1], dlugosci_tmp[j])+tablica[it->ID][j];}
-			if(nast.suma > dlugosci_tmp[m])
+					if(j==0)
+						sumy[j]+=tablica[it->ID-1][j];
+					else
+						sumy[j]=max(sumy[j-1], sumy[j])+tablica[it->ID-1][j];
+			it++;
+		}
+
+		nast.suma=sumy[m-1];
+		nast.ID=it_main->ID;
+		koniec=true;
+
+		for(it=kolejnosc->begin(); it!=kolejnosc->end(); it++)
+		{
+			list<zadanie>::iterator sum = kolejnosc->begin();
+			for(unsigned int i=0; i<m; i++)
+				sumy[i]=0;
+			while(sum!=kolejnosc->end())
 			{
-				nast.suma=dlugosci_tmp[m];
-				nast.ID=it1->ID;
-				for(unsigned int i=0; i<m; i++)
-					dlugosci[i]=dlugosci_tmp[i];
+			list<zadanie>::iterator tmp = sum;
+			if(tmp!=kolejnosc->begin())
+				tmp--;
+				for(unsigned int j=0; j<m; j++)
+					if(tmp!=it) // za daleko -1
+						if(j==0)
+							sumy[j]+=tablica[sum->ID-1][j];
+						else
+							sumy[j]=max(sumy[j-1], sumy[j])+tablica[sum->ID-1][j];
+					else
+						if(j==0)
+							sumy[j]+=tablica[it_main->ID-1][j];
+						else
+							sumy[j]=max(sumy[j-1], sumy[j])+tablica[it_main->ID-1][j];
+				sum++;
 			}
-			for(unsigned int i=0;i<m;i++)
-				dlugosci_const[i]=dlugosci[i];
-		for(list<zadanie>::iterator it = szereg->begin(); it!=szereg->end(); it++)
-			cout << it->ID << " ";
-		cout << endl;
+			cout << nast.suma << " " <<sumy[m-1]<< endl;
+			if(nast.suma > sumy[m-1])
+			{
+				nast.suma=sumy[m-1];
+				nast.ID=it->ID;
+				koniec=false;
+			}
+		}
+
+		it=kolejnosc->begin();
+
+		if(koniec)
+			kolejnosc->push_front(nast);
+		else
+		{
+			while(it->ID!=nast.ID)
+				it++;
+			nast.ID=it_main->ID;
+			kolejnosc->insert(it, nast);
+		}
+		
 		for(list<zadanie>::iterator it = kolejnosc->begin(); it!=kolejnosc->end(); it++)
 			cout << it->ID << " ";
 		cout << endl;
-		//cout << it1->ID << endl;
-		kolejnosc->insert(it, nast);
-	
 	}
-	for(list<zadanie>::iterator it = szereg->begin(); it!=szereg->end(); it++)
-		cout << it->ID << " ";
-	cout << endl;
-	for(list<zadanie>::iterator it = kolejnosc->begin(); it!=kolejnosc->end(); it++)
-		cout << it->ID << " ";
-	cout << endl;
-	for(list<zadanie>::iterator it = kolejnosc->begin(); it!=kolejnosc->end(); it++)
-		cout << it->suma << " ";
-	cout << endl;
+
+		for(list<zadanie>::iterator it = szereg->begin(); it!=szereg->end(); it++)
+			cout << it->ID << " ";
+		cout << endl;
 
 	fstream data_out ("out.txt", ios::out|ios::app);
 	data_out << nazwa << endl;
@@ -130,9 +158,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	data_out<< endl;
 
 	delete szereg;
-	delete [] dlugosci_const;
 	delete [] tablica;
 	}
+
 	stop=clock();
 	czas= stop-start;
 	cout << czas << " ms" << endl;
@@ -140,4 +168,3 @@ int _tmain(int argc, _TCHAR* argv[])
 			
 	system("PAUSE");
 }
-

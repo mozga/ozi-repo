@@ -33,7 +33,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	start=clock();
 
-	for(unsigned l=0;l<1;l++)
+	for(unsigned l=0;l<4;l++)		// liczba instancji
 	{
 	string nazwa, numer;
 	data_in >> nazwa;
@@ -50,7 +50,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	list<zadanie> * szereg = new list<zadanie>;
 	
 	for(unsigned int k=0; k<n; k++)
-		{
+	{
 		int suma=0;
 		for(unsigned int q=0; q<m; q++)
 			suma+=tablica[k][q];
@@ -58,106 +58,94 @@ int _tmain(int argc, _TCHAR* argv[])
 		nowy->ID=k+1;
 		nowy->suma=suma;
 		szereg->push_back(*nowy);	 	
-		}
+	}
 	szereg->sort(compare);
 
-	list<zadanie> * kolejnosc = new list<zadanie>;
-	zadanie pierwszy;
+	for(list<zadanie>::iterator it=szereg->begin(); it !=szereg->end();it++)
+		cout << it->ID << " ";
+
+	list<unsigned int> * kolejnosc = new list<unsigned int>;
+
 	list<zadanie>::iterator it_main=szereg->begin();
 
-	pierwszy.ID=it_main->ID;
-	pierwszy.suma=it_main->suma;
-	kolejnosc->push_front(pierwszy);
+	kolejnosc->push_front(it_main->ID);
 	it_main++;
 
-	for(unsigned int op=0;/* op<3 &&*/ it_main!=szereg->end(); op++, it_main++)
+	unsigned int * sumy = new unsigned int[m];
+
+//*************************************************************************************\\
+
+	for(; it_main!=szereg->end(); it_main++)
 	{
-		unsigned int * sumy = new unsigned int[m];
+		unsigned int suma_ID;
 		for(unsigned int i=0; i<m; i++)
 			sumy[i]=0;
-		zadanie nast;
-		list<zadanie>::iterator it = kolejnosc->begin();
-		
-		while(it!=kolejnosc->end())
+
+		list<unsigned int>::iterator ID = kolejnosc->begin();
+
+		for(list<unsigned int>::iterator it = kolejnosc->begin(); it!=kolejnosc->end(); it++)
 		{
-			for(unsigned int j=0; j<m; j++)
-				if(it==kolejnosc->begin())
-					if(j==0)
-						sumy[j]=tablica[it_main->ID-1][j];
-					else
-						sumy[j]=sumy[j-1]+tablica[it_main->ID-1][j];
-				else
-					if(j==0)
-						sumy[j]+=tablica[it->ID-1][j];
-					else
-						sumy[j]=max(sumy[j-1], sumy[j])+tablica[it->ID-1][j];
-			it++;
+			sumy[0]+=tablica[*it-1][0];
+			for(unsigned int j=1; j<m; j++)
+				sumy[j]=max(sumy[j-1], sumy[j])+tablica[*it-1][j];
 		}
 
-		nast.suma=sumy[m-1];
-		nast.ID=it_main->ID;
+		sumy[0]+=tablica[it_main->ID-1][0];
+		for(unsigned int j=1; j<m; j++)
+			sumy[j]=max(sumy[j-1], sumy[j])+tablica[it_main->ID-1][j];
+
+		suma_ID=sumy[m-1];
 		koniec=true;
 
-		for(it=kolejnosc->begin(); it!=kolejnosc->end(); it++)
+		for(list<unsigned int>::iterator it = kolejnosc->begin(); it!=kolejnosc->end(); it++)
 		{
-			list<zadanie>::iterator sum = kolejnosc->begin();
+			list<unsigned int>::iterator sum = kolejnosc->begin();
 			for(unsigned int i=0; i<m; i++)
 				sumy[i]=0;
 			while(sum!=kolejnosc->end())
 			{
-			list<zadanie>::iterator tmp = sum;
-			if(tmp!=kolejnosc->begin())
-				tmp--;
-				for(unsigned int j=0; j<m; j++)
-					if(tmp!=it) // za daleko -1
-						if(j==0)
-							sumy[j]+=tablica[sum->ID-1][j];
-						else
-							sumy[j]=max(sumy[j-1], sumy[j])+tablica[sum->ID-1][j];
-					else
-						if(j==0)
-							sumy[j]+=tablica[it_main->ID-1][j];
-						else
-							sumy[j]=max(sumy[j-1], sumy[j])+tablica[it_main->ID-1][j];
+				if(sum==it)
+				{
+					sumy[0]+=tablica[it_main->ID-1][0];
+					for(unsigned int j=1; j<m; j++)
+						sumy[j]=max(sumy[j-1], sumy[j])+tablica[it_main->ID-1][j];
+				}
+				sumy[0]+=tablica[*sum-1][0];
+				for(unsigned int j=1; j<m; j++)
+					sumy[j]=max(sumy[j-1], sumy[j])+tablica[*sum-1][j];
 				sum++;
 			}
-			cout << nast.suma << " " <<sumy[m-1]<< endl;
-			if(nast.suma > sumy[m-1])
+
+			if(suma_ID > sumy[m-1])					// roznica
 			{
-				nast.suma=sumy[m-1];
-				nast.ID=it->ID;
+				suma_ID=sumy[m-1];
+				ID=it;
 				koniec=false;
 			}
 		}
 
-		it=kolejnosc->begin();
-
 		if(koniec)
-			kolejnosc->push_front(nast);
+			kolejnosc->push_back(it_main->ID);
 		else
-		{
-			while(it->ID!=nast.ID)
-				it++;
-			nast.ID=it_main->ID;
-			kolejnosc->insert(it, nast);
-		}
-		
-		for(list<zadanie>::iterator it = kolejnosc->begin(); it!=kolejnosc->end(); it++)
-			cout << it->ID << " ";
-		cout << endl;
+			kolejnosc->insert(ID, it_main->ID);
+
 	}
 
-		for(list<zadanie>::iterator it = szereg->begin(); it!=szereg->end(); it++)
-			cout << it->ID << " ";
-		cout << endl;
+	for(list<unsigned int>::iterator it = kolejnosc->begin(); it!=kolejnosc->end(); it++)
+		cout << *it << " ";
+	cout << endl;
+
+	cout << sumy[m-1] << endl << endl;
 
 	fstream data_out ("out.txt", ios::out|ios::app);
 	data_out << nazwa << endl;
-	for(list<zadanie>::iterator it = szereg->begin(); it!=szereg->end(); it++)
-		data_out << it->ID << " ";
-	data_out<< endl;
+	for(list<unsigned int>::iterator it = kolejnosc->begin(); it!=kolejnosc->end(); it++)
+		data_out << *it << " ";
+	data_out << endl;
 
-	delete szereg;
+	for(unsigned int i=0; i<n; i++)
+		delete tablica[i];
+
 	delete [] tablica;
 	}
 

@@ -33,7 +33,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	start=clock();
 
-	for(unsigned l=0;l<4;l++)		// liczba instancji
+	for(unsigned l=0;l<2;l++)		// liczba instancji
 	{
 	string nazwa, numer;
 	data_in >> nazwa;
@@ -61,8 +61,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 	szereg->sort(compare);
 
-	for(list<zadanie>::iterator it=szereg->begin(); it !=szereg->end();it++)
-		cout << it->ID << " ";
+	//for(list<zadanie>::iterator it=szereg->begin(); it !=szereg->end();it++)
+		//cout << it->ID << " ";
+	//cout << endl;
 
 	list<unsigned int> * kolejnosc = new list<unsigned int>;
 
@@ -116,7 +117,9 @@ int _tmain(int argc, _TCHAR* argv[])
 				sum++;
 			}
 
-			if(suma_ID > sumy[m-1])					// roznica
+			//cout << suma_ID << " " << sumy[m-1] << endl;
+
+			if((suma_ID > sumy[m-1]) || ((suma_ID >= sumy[m-1]) && koniec==true))
 			{
 				suma_ID=sumy[m-1];
 				ID=it;
@@ -128,6 +131,10 @@ int _tmain(int argc, _TCHAR* argv[])
 			kolejnosc->push_back(it_main->ID);
 		else
 			kolejnosc->insert(ID, it_main->ID);
+
+		for(list<unsigned int>::iterator it = kolejnosc->begin(); it!=kolejnosc->end(); it++)
+			cout << *it << " ";
+		cout << endl;
 
 	}
 

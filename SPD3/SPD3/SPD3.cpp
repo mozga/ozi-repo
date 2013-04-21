@@ -33,7 +33,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	start=clock();
 
-	for(unsigned l=0;l<2;l++)		// liczba instancji
+	for(unsigned l=0;l<120;l++)		// liczba instancji
 	{
 	string nazwa, numer;
 	data_in >> nazwa;
@@ -132,23 +132,32 @@ int _tmain(int argc, _TCHAR* argv[])
 		else
 			kolejnosc->insert(ID, it_main->ID);
 
-		for(list<unsigned int>::iterator it = kolejnosc->begin(); it!=kolejnosc->end(); it++)
-			cout << *it << " ";
-		cout << endl;
+		//for(list<unsigned int>::iterator it = kolejnosc->begin(); it!=kolejnosc->end(); it++)
+		//	cout << *it << " ";
+		//cout << endl;
 
 	}
-
+	for(unsigned int i=0; i<m; i++)
+		sumy[i]=0;
 	for(list<unsigned int>::iterator it = kolejnosc->begin(); it!=kolejnosc->end(); it++)
-		cout << *it << " ";
-	cout << endl;
+	{
+		sumy[0]+=tablica[*it-1][0];
+		for(unsigned int j=1; j<m; j++)
+			sumy[j]=max(sumy[j-1], sumy[j])+tablica[*it-1][j];
+	}
 
-	cout << sumy[m-1] << endl << endl;
+
+	//for(list<unsigned int>::iterator it = kolejnosc->begin(); it!=kolejnosc->end(); it++)
+		//cout << *it << " ";
+	//cout << endl;
+
+	//cout << sumy[m-1] << endl << endl;
 
 	fstream data_out ("out.txt", ios::out|ios::app);
 	data_out << nazwa << endl;
 	for(list<unsigned int>::iterator it = kolejnosc->begin(); it!=kolejnosc->end(); it++)
 		data_out << *it << " ";
-	data_out << endl;
+	data_out << sumy[m-1] << endl << endl;
 
 	for(unsigned int i=0; i<n; i++)
 		delete tablica[i];

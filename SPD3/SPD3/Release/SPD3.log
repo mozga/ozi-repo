@@ -1,4 +1,4 @@
-﻿Kompilacja rozpoczęła się 2013-04-21 16:14:43.
+﻿Kompilacja rozpoczęła się 2013-04-21 16:34:36.
      1>Projekt „C:\Users\Vatrax\Documents\GitHub\ozi-repo\SPD3\SPD3\SPD3.vcxproj” w węźle 2 (elementy docelowe: Build).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\SPD3.pch" /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt SPD3.cpp
@@ -13,4 +13,4 @@
 
 Kompilacja powiodła się.
 
-Czas, który upłynął: 00:00:01.65
+Czas, który upłynął: 00:00:01.93

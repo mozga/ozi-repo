@@ -1,8 +1,6 @@
-﻿Kompilacja rozpoczęła się 2013-04-23 16:33:57.
+﻿Kompilacja rozpoczęła się 2013-04-23 17:42:22.
      1>Projekt „C:\Users\Vatrax\Documents\GitHub\ozi-repo\SPD4\SPD4\SPD4.vcxproj” w węźle 2 (elementy docelowe: Build).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\SPD4.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\SPD4.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt SPD4.cpp
          SPD4.cpp
        Link:
@@ -13,4 +11,4 @@
 
 Kompilacja powiodła się.
 
-Czas, który upłynął: 00:00:05.14
+Czas, który upłynął: 00:00:01.37

@@ -14,7 +14,7 @@ struct proces
 	unsigned short r;		//wyprzedzanie
 	unsigned short p;		//zadanie
 	unsigned short q;		//opoznienie
-	unsigned short ID;		//Identyfikator
+	unsigned short ID;		//identyfikator
 };
 
 int sumowanie(list<proces> lista)
@@ -25,14 +25,13 @@ int sumowanie(list<proces> lista)
 		if(it->r>=suma)
 			suma=it->r;
 		suma+=it->p;
-		cout << suma << endl;
 	}
-	/*for(list<proces>::iterator it=lista.end();it!=lista.begin();it--)
+	for(list<proces>::reverse_iterator it=lista.rbegin();it!=lista.rend();it++)
 	{
 		if(it->q>=suma_tmp)
 			suma_tmp=it->q;
 		suma_tmp+=it->p;
-	}*/
+	}
 	suma+=suma_tmp;
 	for(list<proces>::iterator it=lista.begin();it!=lista.end();it++)
 		suma-=it->p;
@@ -41,18 +40,12 @@ int sumowanie(list<proces> lista)
 
 bool comp_r(proces p1, proces p2)
 {
-	if(p1.r>=p2.r)
-		return false;
-	else
-		return true;
+	return (p1.r<p2.r);
 }
 
 bool comp_q(proces p1, proces p2)
 {
-	if(p1.q<=p2.q)
-		return false;
-	else
-		return true;
+	return (p1.q>p2.q);
 }
 
 
@@ -64,7 +57,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	plik >> n;
 	list<proces> r, q, procesy;
 
-	for(short i=0;i<n;i++)
+	for(short i=0; i<n; i++)
 	{
 		proces *nowy= new proces();
 		plik >> nowy->r >> nowy->p >> nowy->q;
@@ -88,11 +81,14 @@ int _tmain(int argc, _TCHAR* argv[])
 					it=r.erase(it);
 				else
 					r.pop_back();
-				if(r.empty())
+				if(r.empty() || i==r.size())
 					break;
 			}
 		}
 		q.sort(comp_q);
+		cout << k << endl;
+		for (list<proces>::iterator it=q.begin(); it!=q.end(); it++)
+			cout << it->r << " " << it->p << " " << it->q << " " << it->ID << endl; //asdasdasdasdasdas
 		if(!q.empty())
 		{
 			it=q.begin();
@@ -100,7 +96,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			k+=it->p;
 			q.pop_front();
 		}
-//		else
+		else
 			k++;
 	}
 
@@ -113,9 +109,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	plik << n << endl;
 	for(it=procesy.begin(); it!=procesy.end();it++)
 		plik << it->ID << " ";
-	plik << endl;
-	plik << sumowanie(procesy);
-	
+	plik << endl << sumowanie(procesy) << endl;
+	cout << endl << sumowanie(procesy) << endl;
+
 	plik.close();
 	system("PAUSE");
 }

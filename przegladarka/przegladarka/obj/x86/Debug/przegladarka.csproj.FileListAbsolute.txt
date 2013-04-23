@@ -1,0 +1,9 @@
+C:\Users\student1.SITH\Documents\asdf\O_K\przegladarka\przegladarka\bin\Debug\przegladarka.exe
+C:\Users\student1.SITH\Documents\asdf\O_K\przegladarka\przegladarka\bin\Debug\przegladarka.pdb
+C:\Users\student1.SITH\Documents\asdf\O_K\przegladarka\przegladarka\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\student1.SITH\Documents\asdf\O_K\przegladarka\przegladarka\obj\x86\Debug\przegladarka.Form1.resources
+C:\Users\student1.SITH\Documents\asdf\O_K\przegladarka\przegladarka\obj\x86\Debug\przegladarka.Properties.Resources.resources
+C:\Users\student1.SITH\Documents\asdf\O_K\przegladarka\przegladarka\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\student1.SITH\Documents\asdf\O_K\przegladarka\przegladarka\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\student1.SITH\Documents\asdf\O_K\przegladarka\przegladarka\obj\x86\Debug\przegladarka.exe
+C:\Users\student1.SITH\Documents\asdf\O_K\przegladarka\przegladarka\obj\x86\Debug\przegladarka.pdb

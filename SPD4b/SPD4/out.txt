@@ -1,0 +1,4 @@
+data01.txt
+
+Dlugosc: 1133
+

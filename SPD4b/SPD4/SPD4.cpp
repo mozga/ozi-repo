@@ -6,6 +6,7 @@
 #include <iostream>
 #include <fstream>
 #include <list>
+#include <algorithm>
 
 using namespace std;
 
@@ -28,7 +29,7 @@ bool comp_q(proces p1, proces p2)
 
 void algorytm(char * name)
 {
-	unsigned short n, k=0;
+	unsigned short n, k=0, lenght=0;
 	fstream plik;
 	plik.open(name, std::ios::in );
 	plik >> n;
@@ -62,15 +63,18 @@ void algorytm(char * name)
 			list<proces>::iterator it=q.begin();
 			it->p--;
 			if(it->p==0)
+			{
+				lenght=max((unsigned int) k+it->q, (unsigned int) lenght);
 				q.pop_front();
+			}
 		}
-		k++;	//+q (wszystkich)
+		k++;
 	}
-
+	lenght++;
 	plik.open("out.txt", ios::out|ios::app);
 	plik << name << endl;
-	cout << endl << k << endl;
-	plik << endl << "Dlugosc: " << k << endl << endl;
+	cout << lenght << endl;
+	plik << "Dlugosc: " << lenght << endl << endl;
 
 	plik.close();
 }
@@ -80,7 +84,7 @@ void algorytm(char * name)
 int _tmain(int argc, _TCHAR* argv[])
 {
 	algorytm("data01.txt");
-/*	algorytm("data02.txt");
+	algorytm("data02.txt");
 	algorytm("data03.txt");
 	algorytm("data04.txt");
 	algorytm("data05.txt");
@@ -88,6 +92,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	algorytm("data07.txt");
 	algorytm("data08.txt");
 	algorytm("data09.txt");
-	algorytm("data10.txt");*/
+	algorytm("data10.txt");
 	system("PAUSE");
 }

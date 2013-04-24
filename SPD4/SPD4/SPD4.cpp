@@ -48,12 +48,11 @@ bool comp_q(proces p1, proces p2)
 	return (p1.q>p2.q);
 }
 
-
-int _tmain(int argc, _TCHAR* argv[])
+void algorytm(char * name)
 {
 	unsigned short n, k=0;
 	fstream plik;
-	plik.open("data01.txt", std::ios::in );
+	plik.open(name, std::ios::in );
 	plik >> n;
 	list<proces> r, q, procesy;
 
@@ -71,27 +70,19 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	while(!r.empty() || !q.empty())
 	{
-		list<proces>::iterator it=r.begin();
-		for( unsigned int i=0; i < r.size(); i++, it++)
-		{
+		for(list<proces>::iterator it=r.begin(); it!=r.end();)
 			if(it->r<=k)
 			{
 				q.push_back(*it);
-				if(i<r.size()-1)
-					it=r.erase(it);
-				else
-					r.pop_back();
-				if(r.empty() || i==r.size())
-					break;
+				it=r.erase(it);
 			}
-		}
+			else
+				break;
 		q.sort(comp_q);
-		cout << k << endl;
-		for (list<proces>::iterator it=q.begin(); it!=q.end(); it++)
-			cout << it->r << " " << it->p << " " << it->q << " " << it->ID << endl; //asdasdasdasdasdas
+
 		if(!q.empty())
 		{
-			it=q.begin();
+			list<proces>::iterator it=q.begin();
 			procesy.push_back(*it);
 			k+=it->p;
 			q.pop_front();
@@ -103,15 +94,32 @@ int _tmain(int argc, _TCHAR* argv[])
 	list<proces>::iterator it=procesy.begin();
 
 	for(it=procesy.begin(); it!=procesy.end();it++)
-		cout << it->ID  << " "; //<< it->r << " " << it->p << " " << it->q << endl;
+		cout << it->ID  << " ";
 
-	plik.open("out01.txt", std::ios::out );
+	plik.open("out.txt", ios::out|ios::app);
+	plik << name << endl;
 	plik << n << endl;
 	for(it=procesy.begin(); it!=procesy.end();it++)
 		plik << it->ID << " ";
-	plik << endl << sumowanie(procesy) << endl;
 	cout << endl << sumowanie(procesy) << endl;
+	plik << endl << "Dlugosc: " << sumowanie(procesy) << endl << endl;
 
 	plik.close();
+}
+
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	algorytm("data01.txt");
+	algorytm("data02.txt");
+	algorytm("data03.txt");
+	algorytm("data04.txt");
+	algorytm("data05.txt");
+	algorytm("data06.txt");
+	algorytm("data07.txt");
+	algorytm("data08.txt");
+	algorytm("data09.txt");
+	algorytm("data10.txt");
 	system("PAUSE");
 }

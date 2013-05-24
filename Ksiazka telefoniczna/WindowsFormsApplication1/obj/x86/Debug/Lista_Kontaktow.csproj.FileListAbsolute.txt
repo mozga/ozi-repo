@@ -1,9 +1,0 @@
-C:\Users\Ozi\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
-C:\Users\Ozi\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
-C:\Users\Ozi\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\Ozi\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\Ozi\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\Lista_Kontaktow.csprojResolveAssemblyReference.cache
-C:\Users\Ozi\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
-C:\Users\Ozi\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\Ozi\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Przeglad.resources
-C:\Users\Ozi\Documents\GitHub\ozi-repo\Ksiazka telefoniczna\WindowsFormsApplication1\obj\x86\Debug\Lista_Kontaktow.csproj.GenerateResource.Cache
